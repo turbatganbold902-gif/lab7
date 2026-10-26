@@ -1,0 +1,56 @@
+
+@use "tokens" as *;
+@use "mixins" as *;
+@use "functions" as *;
+@use "utilities";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: $background;
+  color: $text;
+}
+
+// BEM: container
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: rem(24px);
+}
+
+// BEM: card block and elements
+.card {
+  background: #fff;
+  padding: rem(24px);
+  border-radius: $radius;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+
+  &__title {
+    color: $primary;
+  }
+
+  &__button {
+    display: inline-flex;
+    @include flex-center;
+    background: $primary;
+    color: contrast($primary);
+    border: 0;
+    border-radius: $radius;
+    padding: rem(12px) rem(20px);
+    cursor: pointer;
+  }
+}
+
+@include respond(mobile) {
+  .container {
+    padding: rem(12px);
+  }
+
+  .card {
+    padding: rem(16px);
+  }
+}

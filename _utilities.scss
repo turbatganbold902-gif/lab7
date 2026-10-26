@@ -1,0 +1,44 @@
+
+@use "mixins" as *;
+
+// Flex utility
+.flex-center {
+  @include flex-center;
+}
+
+// Text utility
+$text-alignments: (
+  left: left,
+  center: center,
+  right: right
+);
+
+@each $name, $value in $text-alignments {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}
+
+// Spacing utilities
+$spacing: (
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+@each $name, $value in $spacing {
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .p-#{$name} {
+    padding: $value;
+  }
+}
+
+// Visibility utility
+.hidden {
+  display: none;
+}
