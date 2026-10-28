@@ -1,0 +1,18 @@
+/* Error: expected "$".
+ *   ,
+ * 4 | @function rem($px) {npm.cmd run build
+ *   |                         ^
+ *   '
+ *   scss\_functions.scss 4:25  @use
+ *   scss\main.scss 3:1         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "$".\a   \2577 \a 4 \2502  @function rem($px) {npm.cmd run build\d\a   \2502                          ^\a   \2575 \a   scss\\_functions.scss 4:25  @use\a   scss\\main.scss 3:1         root stylesheet';
+}

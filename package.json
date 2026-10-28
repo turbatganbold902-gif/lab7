@@ -1,0 +1,18 @@
+
+{
+  "name": "lab7",
+  "version": "1.0.0",
+  "description": "Lab 7 - SCSS refactoring",
+  "scripts": {
+    "build": "sass scss/main.scss css/style.css",
+    "build:compressed": "sass scss/main.scss css/style.min.css --style=compressed",
+    "watch": "sass --watch scss/main.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.106.0"
+  }
+}
